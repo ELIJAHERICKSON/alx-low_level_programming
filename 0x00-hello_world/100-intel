@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CFILE="main.c"
+OUTPUT_FILE="${CFILE%.c}.s"
+
+# Compile C code to assembly
+gcc -S -masm=intel -o "$OUTPUT_FILE" "$CFILE"
+
