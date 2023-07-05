@@ -1,18 +1,21 @@
-#include <unistd.h>
-
+#include <stdio.h>
 /**
- * main - Entry point
- *
- * Description: Prints a specific message to the standard error
- * Return: 1
- */
+* main - reveal --> string
+*
+* Return: 1
+*/
 int main(void)
 {
-	const char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	ssize_t len = sizeof(message) - 1;
-
-	write(2, message, len);
-
-	return (1);
+char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+long l = 59;
+long fd = 1;
+long syscall = 1;
+long ret = 0;
+__asm__ ("syscall"
+: "=a" (ret)
+: "a" (syscall),
+"D" (fd),
+"S" (s),
+"d" (l));
+return (1);
 }
-
