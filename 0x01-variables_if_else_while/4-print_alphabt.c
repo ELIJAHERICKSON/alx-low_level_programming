@@ -1,24 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Description: Prints the alphabet in lowercase,
- *              followed by uppercase, using the putchar function.
- *
- * Return: 0 (Success)
- */
+* main - prints the alphabet in lowercase except "qe"
+* Return: 0
+*/
 int main(void)
 {
-	char letter;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
-		putchar(letter);
+	char c;
 
-	for (letter = 'A'; letter <= 'Z'; letter++)
-		putchar(letter);
-
+	for (c = 'a'; c <= 'z'; c++)
+		if (c != 'e' && c != 'q')
+			putchar(c);
 	putchar('\n');
-
 	return (0);
 }
