@@ -1,4 +1,0 @@
-HEAD
-low level programing
-#alx-low_level_programming
-d5e029073bfe98dcddf75011bde79664b5a7acc7
